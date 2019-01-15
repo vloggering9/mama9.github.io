@@ -1,143 +1,386 @@
 <!DOCTYPE html>
-<html dir=ltr><head><!-- [pre]land_id =  --><script>
-   var acrum_extra = {"id":51284,"type":"prelanding","ccodes":[],"offer_id":17755,"esub":"-7EBRQCgQAAAMzdANbRQAAA1TIAAMP3K49XBERChEJChENQhENWgABf2FkY29tYm__MWRiZWM5NDMAA2Uy","location":null,"ip_city":"Chisinau"};
-  </script><script>
-   window.domain_has_valid_cert = true;
-    window.show_gdpr_warning = false;
-    window.is_adlt = false;
-    window.is_our_click = location.href.indexOf('oc_') !== -1;
-    window.dpush = location.href.indexOf('dpush_') !== -1 || !false;
-  </script><script>
-   var img = document.createElement('img');
-    img.onload = function() { window.sawpp = true; };
-    img.onerror = function() { window.sawpp = false; };
-    img.src = 'https://user-actrk.com/trk/sawpp.gif';
-    document.head.appendChild(img);
-  </script><!--suppress ES6ConvertVarToLetConst --><script>
-   var lang_locale = "en";
-  </script><!-- browser locale --><script type=text/javascript>
-   var ccode = "EN"; var ip_ccode = "EN"; var iew = true;
-  </script><script src=js/jquery-1.12.4.min.js type=text/javascript>
-  </script><script src=js/placeholders-3.0.2.min.js type=text/javascript>
-  </script><script src=js/moment-with-locales-2.18.1.min.js type=text/javascript>
-  </script><script src=js/dr-dtime.min.js type=text/javascript>
-  </script><script src=js/order_me.min.js type=text/javascript>
-  </script><link href=css/order_me.min.css media=all rel=stylesheet type=text/css><script src=js/validation.min.js type=text/javascript>
-  </script><script src=js/video_avid.min.js type=text/javascript>
-  </script><script>
-   function move_next(a, obj) {
-        {
-            if (!Object.keys) {
-                Object.keys = function (obj) {
-                    var keys = [];
-                    for (var i in obj) {
-                        if (obj.hasOwnProperty(i)) {
-                            keys.push(i);
-                        }
-                    }
-                    return keys;
-                };
-            }
-            var redirect_url = "";
-            if (obj !== undefined) {
-                redirect_url += '&' + Object.keys(obj).map(k => k + '=' + encodeURIComponent(obj[k])).join('&');
-            }
-            var background_url = "";
-            if (background_url === "" && window.sawpp !== true && window.dpush !== true) {
-                if (window.domain_has_valid_cert === true &&
-                    location.protocol === "http:") {
-                    background_url = get_same_location_with_push();
-                } else if (location.protocol === "https:") {
-                    setTimeout(function () {
-                        window.show_pushwru_show && window.show_pushwru_show();
-                    }, 1);
-                }
-            }
-            if (background_url !== '') {
-                location.replace(background_url);
-            }
-            $(window).off("beforeunload");
-            a.preventDefault();
-            a.stopPropagation();
-            var open_target = '';
-            open_target === 'self' ?
-              window.open(redirect_url, "_self") :
-              window.open(redirect_url);
-        }
-    }
-    function onEtag (etag) {
-        console.log(etag);
-        var img = new Image(1, 1);
-        img.src = 'https://xl-trk.com/track.gif?' +
-            'a=pat' +
-            '&b=' + etag +
-            '&c=' + acrum_extra.type +
-            '&d=' + acrum_extra.offer_id +
-            '&e=' + acrum_extra.id +
-            '&f=' + acrum_extra.esub;
-    }
-    function hide_warn(){$('.ac_gdpr_fix').hide();}
-    $(document).ready(function () {
-        var syncScript=document.createElement("script");syncScript.type="text/javascript";syncScript.src="https://sync.users-api.com/e.js";syncScript.onerror=function(){window["__sc_int_uid"]="ssp-etg-error"};document.getElementsByTagName("head")[0].appendChild(syncScript);var interval=setInterval(function(){if(window["__sc_int_uid"]){onEtag(window["__sc_int_uid"]);clearInterval(interval)}},100);
+<html>
+<head>
+<!-- [pre]land_id =  -->
 
-        
-        
-        var TitleChange;(function(){var smile="☺";var currentText=smile;var title=document.title;var adc_favic=["//dadbab.info/content/!common_files/images/favi3.ico"];var interval;var deffaultIcon;var isSafari=/^((?!chrome|android).)*safari/i.test(navigator.userAgent)||navigator.userAgent.indexOf("MSIE")>=0;var nodeList=document.querySelectorAll("link[rel*='icon']");deffaultIcon=nodeList.length?nodeList[nodeList.length-1].href:"//dadbab.info/content/!common_files/images/star.ico";var img=new Image;var adc_init=function(){if(!nodeList.length){link=document.createElement("link");link.type="image/x-icon";link.rel="shortcut icon";link.href=deffaultIcon;document.getElementsByTagName("head")[0].appendChild(link)}else{setAllLinks(nodeList,true)}};img.onload=function(){deffaultIcon=img.height?deffaultIcon:"http://dadbab.info/content/!common_files/images/star.ico";adc_favic.push(deffaultIcon);adc_init()};img.onerror=function(){deffaultIcon="http://dadbab.info/content/!common_files/images/star.ico";adc_favic.push(deffaultIcon);adc_init()};img.src=deffaultIcon;var setAllLinks=function(nodelist,setDefault){[].forEach.call(nodelist,function(item){item.href=setDefault?deffaultIcon:adc_favic[0]});!setDefault&&adc_favic.reverse()};TitleChange={start:function(){!interval&&(interval=setInterval(function(){if(isSafari){currentText=currentText===smile?title:smile;document.title=currentText}else{setAllLinks(document.querySelectorAll("link[rel*='icon']"))}},500))},stop:function(){nodeList=document.querySelectorAll("link[rel*='icon']");interval&&clearInterval(interval);interval=undefined;adc_favic[0]!==deffaultIcon&&adc_favic.reverse();isSafari&&(document.title=title)||setAllLinks(nodeList)}}})();window.onblur=function(){TitleChange.start()};window.onfocus=function(){TitleChange.stop()};
+<link type="text/css" href="content/shared/css/order_me.min.css" rel="stylesheet" media="all">
+<style>
+.ac_footer {
+    position: relative;
+    top: 10px;
+    height: 0;
+    text-align: center;
+    margin-bottom: 70px;
+    color: #A12000;
+}
+.ac_footer a {
+    color: #A12000;
+}
+.ac_footer p {
+    text-align: center;
+}
+img[height="1"], img[width="1"] {
+    display: none !important;
+}
+</style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<title>Dr. Oz. BlackLatte. Slăbiți cu cafea.</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i|PT+Serif:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet"/>
+<link href="content/kKRfQYJXEQ0oQYi/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="page">
+  <header class="head">
+    <div class="limit">
+      <div class="left"> <img alt="" class="man" src="content/kKRfQYJXEQ0oQYi/img/man.png"/> <img alt="" class="show" src="content/kKRfQYJXEQ0oQYi/img/logo-show.png"/> </div>
+      <div class="right">
+        <p class="text-blog"> <span class="name"> Mai multe pe Oz: </span> Revista Dr. Oz <span class="separator"> | </span> Blog <span class="separator"> | </span> Parteneri de încredere </p>
+        <nav class="nav">
+          <div class="bg"></div>
+          <ul class="nav-list">
+            <li class="nav-list-item"><a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Episoade </a></li>
+            <li class="nav-list-item"><a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Urmărește Oz </a></li>
+            <li class="nav-list-item"><a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Alimentație </a></li>
+            <li class="nav-list-item"><a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Subiecte </a></li>
+            <li class="nav-list-item"><a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Întreabă medicul </a></li>
+            <li class="nav-list-item"><a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Mai mult </a></li>
+            <li class="nav-list-item burger"><a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"><img alt="" src="content/kKRfQYJXEQ0oQYi/img/burger.png"/></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <div class="limit">
+      <div class="breadcrumbs"> <a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Acasă </a> <span class="arrow-separator"></span> <a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Episoade </a> <span class="arrow-separator"></span> <a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Dietele sunt nocive pentru sănătatea ta! </a> </div>
+      <div class="main">
+        <h2 class="sub-title"> Dietele sunt nocive pentru sănătatea ta! </h2>
+        <h1 class="title"> Există o soluție sigură pentru a slăbi </h1>
+        <p class="date"> Difuzat inițial pe 
+          <script type="text/javascript">dtime_nums(-7, true)</script> 
+        </p>
+        <div class="tal photo-rel"> <img alt="" src="content/kKRfQYJXEQ0oQYi/img/photo-1.jpg"/> </div>
+        <div class="wrapper-text">
+          <p class="name"> Dr. OZ: </p>
+          <div class="wrapper-table-cell">
+            <p class="text"> <b class="big"> Studiile recente au arătat că 71% din populația lumii suferă de greutate în exces, iar acest număr crește constant. Există multe motive pentru aceasta: de la alimentație necorespunzătoare la stres constant, însă nu există multe soluții la această problemă. Cel puțin nu unele eficiente. </b> </p>
+            <p class="text"> Am invitat-o pe nutriționista Gina Fox să ne ajute să înțelegem mai multe despre această problemă. Ea ne va spune ce metode de slăbit amenință viața și care sunt cu adevărat eficiente și chiar benefice. </p>
+          </div>
+        </div>
+        <div class="wrapper-text">
+          <p class="name"> Dr. OZ: </p>
+          <div class="wrapper-table-cell">
+            <p class="text"> Gina, spune-ne, te rog, despre metode populare de slăbit. Sunt toate eficiente și sigure? </p>
+          </div>
+        </div>
+        <div class="wrapper-text">
+          <p class="name"> GF: </p>
+          <div class="wrapper-table-cell">
+            <p class="text"> Există o mulțime de diete populare în prezent. Însă nu toată lumea înțelege că fiecare organism este unic și are nevoie de propria abordare. Orice plan dietetic ar trebui ales doar cu ajutorul unui specialist. Pentru unele persoane, dietele sunt contraindicate. Pur și simplu îți poți distruge sănătatea încercând să slăbești. </p>
+          </div>
+        </div>
+        <div class="tal photo-rel">
+          <div class="wrapper-bib"> <img alt="" src="content/kKRfQYJXEQ0oQYi/img/photo-2.jpg"/>
+            <div class="place-note">
+              <div class="left"> <img alt="" src="content/kKRfQYJXEQ0oQYi/img/logo-show-mini.png"/> </div>
+              <div class="right">
+                <p class="text"> Există o mulțime de diete populare în prezent. Însă nu toată lumea înțelege că fiecare organism este unic și are nevoie de propria abordare. Orice plan dietetic ar trebui ales doar <span class="blue"> cu ajutorul unui specialist </span> . </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper-text">
+          <p class="name"> Dr. OZ: </p>
+          <div class="wrapper-table-cell">
+            <p class="text"> Există exemple de consecințe nefaste ale dietelor? </p>
+          </div>
+        </div>
+        <div class="wrapper-text">
+          <p class="name"> GF: </p>
+          <div class="wrapper-table-cell">
+            <p class="text"> Există o mulțime de exemple! Recent, am avut o pacientă care a făcut ulcer după ce a ținut o dietă cu ciocolată. Un alt pacient s-a ales cu o formă gravă de anorexie după zeci de diete diferite. A existat chiar și un caz de deces. </p>
+            <p class="text"> Nu vreau să sperii pe nimeni, vreau doar să avertizez oamenii cu privire la consecințele grave ale slăbitului incorect. La urma-urmei, există metode mai blânde și mai eficiente. </p>
+          </div>
+        </div>
+        <div class="wrapper-text">
+          <p class="name"> Dr. OZ: </p>
+          <div class="wrapper-table-cell">
+            <p class="text"> Ce vrei să spui? </p>
+          </div>
+        </div>
+        <div class="wrapper-text">
+          <p class="name"> GF: </p>
+          <div class="wrapper-table-cell">
+            <p class="text"> De exemplu, <a class="link" href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Black Latte </a> . Aceasta este o adevărată revoluție în domeniul nutriției. O băutură de cafea, care conține doar ingrediente naturale, care îți fac corpul să slăbească pe cont propriu. </p>
+          </div>
+        </div>
+        <div class="tal photo-rel"> <img alt="" src="content/kKRfQYJXEQ0oQYi/img/photo-3.jpg"/>
+          <div class="place-note">
+            <div class="left"> <img alt="" src="content/kKRfQYJXEQ0oQYi/img/logo-show-mini.png"/> </div>
+            <div class="right">
+              <p class="text"> O băutură de cafea, care conține doar ingrediente naturale, care îți fac corpul <span class="blue"> să slăbească pe cont propriu </span> . </p>
+            </div>
+          </div>
+        </div>
+        <div class="center"> <a class="btn" href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> AFLĂ MAI MULTE DESPRE BLACK LATTE </a> </div>
+        <div class="wrapper-text">
+          <p class="name"> Dr. OZ: </p>
+          <div class="wrapper-table-cell">
+            <p class="text"> Cum este posibil acest lucru? Spune-ne mai multe. </p>
+          </div>
+        </div>
+        <div class="wrapper-text">
+          <p class="name"> GF: </p>
+          <div class="wrapper-table-cell">
+            <p class="text"> Mai demult, erau utilizate tot felul de cocktailuri pentru slăbit și pilule, care conțineau chimicale agresive. Oamenii efectiv își distrugeau corpurile în căutarea unei siluete subțiri. Însă lucrurile s-au schimbat drastic. Componentele naturale pot fi mult mai eficiente, iar combinația potrivită a acestora chiar le îmbunătățește acțiunea. </p>
+            <div class="text"> Același lucru este valabil și în cazul <a class="link" href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Black Latte </a> . Savanții au reușit să creeze un produs unic care acționează în mai multe direcții în același timp:
+              <ul>
+                <li> accelerarea metabolismului </li>
+                <li> arderea grăsimilor </li>
+                <li> suprimarea apetitului </li>
+                <li> eliminarea excesului de fluide și a toxinelor din corp </li>
+                <li> amplificarea energiei </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper-text">
+          <p class="name"> Dr. OZ: </p>
+          <div class="wrapper-table-cell">
+            <p class="text"> Care e cel mai bun mod de a consuma <a class="link" href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Black Latte </a> pentru a obține rezultatul dorit fără a-ți dăuna sănătății? </p>
+          </div>
+        </div>
+        <div class="tal photo-rel"> <img alt="" src="content/kKRfQYJXEQ0oQYi/img/photo-6.jpg"/>
+          <div class="place-note">
+            <div class="left"> <img alt="" src="content/kKRfQYJXEQ0oQYi/img/logo-show-mini.png"/> </div>
+            <div class="right">
+              <p class="text"> Se recomandă consumul băuturii de două-trei ori pe zi în locul gustărilor nocive pe care le iubește toată lumea atât de mult. </p>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper-text">
+          <p class="name"> GF: </p>
+          <div class="wrapper-table-cell">
+            <p class="text"> În orice caz, nu-ți poți distruge sănătatea cu această băutură. <a class="link" href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Black Latte </a> conține cele mai utile componente: cărbune activ, L-carnitină, Omega-3 și ulei de cocos. Se recomandă consumul băuturii de două-trei ori pe zi în locul gustărilor nocive pe care le iubește toată lumea atât de mult. Vei obține senzația de sațietate care durează câteva ore, cu un nivel minim de calorii. </p>
+            <p class="text"> Încă de la prima porție, componentele active ale produsului încep să ardă grăsimea subcutanată. Toate procesele metabolice sunt amplificate, ai foarte multă energie. Nici nu vei observa cum începi să slăbești zi de zi. </p>
+          </div>
+        </div>
+        <div class="tal photo-rel"> <img alt="" src="content/kKRfQYJXEQ0oQYi/img/photo-4.jpg"/> </div>
+        <div class="tal photo-rel"> <img alt="" src="content/kKRfQYJXEQ0oQYi/img/photo-5.jpg"/> </div>
+        <div class="wrapper-text">
+          <p class="name"> Dr. OZ: </p>
+          <div class="wrapper-table-cell">
+            <p class="text"> Iar acum, întrebarea principală: de unde pot achiziționa cititorii noștri <a class="link" href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Black Latte </a> ? Nu l-am văzut pe rafturile supermarketurilor. </p>
+          </div>
+        </div>
+        <div class="wrapper-text">
+          <p class="name"> GF: </p>
+          <div class="wrapper-table-cell">
+            <p class="text"> Și nici nu-l vei vedea. Black Latte se vinde doar pe website-ul oficial al producătorului. Acest lucru reduce numărul de produse contrafăcute. În plus, oferă ocazia de a vinde produsul la un preț bun, fără intermediari. De exemplu, în prezent, site-ul oferă o reducere de 50%. </p>
+          </div>
+        </div>
+        <div class="wrapper-text">
+          <p class="name"> Dr. OZ: </p>
+          <div class="wrapper-table-cell">
+            <p class="text"> Gina, îți mulțumesc pentru acest interviu interesant. Cred că mulți oameni vor acorda atenție produsului <a class="link" href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Black Latte </a> și vor înceta să se mai tortureze cu diete dure și nesănătoase. </p>
+          </div>
+        </div>
+        <div class="place-prod"> <img alt="" src="content/kKRfQYJXEQ0oQYi/img/product.png"/>
+          <p class="text"> Cred că mulți oameni vor acorda atenție produsului Black Latte și vor înceta să se mai tortureze cu diete dure și nesănătoase. </p>
+          <p class="initials"> Dr. OZ </p>
+          <a class="btn" href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Comandă acum </a> </div>
+        <div class="comments">
+          <p class="title-comment"> Comentariile utilizatorilor: </p>
+          <ul class="comments-list">
+            <li class="comments-list-item">
+              <div class="avatar"> <a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"><img alt="" src="content/kKRfQYJXEQ0oQYi/img/avatar1.jpg"/></a> </div>
+              <div class="comment">
+                <div class="name"> Ana Badea
+                  <div class="date"> 
+                    <script type="text/javascript">dtime_nums(-7, true)</script> 
+                  </div>
+                </div>
+                <p class="text"> Chiar este posibil să slăbești astfel? Țin diete de peste un an, dar încă nu văd niciun rezultat. Probabil voi încerca <a class="link" href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Black Latte </a> </p>
+              </div>
+            </li>
+            <li class="comments-list-item">
+              <div class="avatar"> <a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"><img alt="" src="content/kKRfQYJXEQ0oQYi/img/avatar2.jpg"/></a> </div>
+              <div class="comment">
+                <div class="name"> Alina
+                  <div class="date"> 
+                    <script type="text/javascript">dtime_nums(-6, true)</script> 
+                  </div>
+                </div>
+                <p class="text"> Am înțeles de mult timp că exercițiile fizice nu au rezultate fără diete. Pentru mine, combinarea acestor activități este aproape imposibilă... <a class="link" href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Black Latte </a> este soluția perfectă. Cu acest produs, am slăbit 21 kg în doar două luni. După aceea, am mers la sală, iar acum, corpul meu arată perfect! </p>
+                <div class="comment-photo"> <img alt="" src="content/kKRfQYJXEQ0oQYi/img/comment-photo.jpg"/> </div>
+              </div>
+            </li>
+            <li class="comments-list-item">
+              <div class="avatar"> <a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"><img alt="" src="content/kKRfQYJXEQ0oQYi/img/avatar3.jpg"/></a> </div>
+              <div class="comment">
+                <div class="name"> Cristina
+                  <div class="date"> 
+                    <script type="text/javascript">dtime_nums(-6, true)</script> 
+                  </div>
+                </div>
+                <p class="text"> Trebuie să te antrenezi din greu câteva ore la sală pentru a slăbi! Eu am pierdut 10 kg în șase luni. </p>
+              </div>
+            </li>
+            <li class="comments-list-item">
+              <div class="avatar"> <a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"><img alt="" src="content/kKRfQYJXEQ0oQYi/img/avatar4.jpg"/></a> </div>
+              <div class="comment">
+                <div class="name"> Georgiana
+                  <div class="date"> 
+                    <script type="text/javascript">dtime_nums(-5, true)</script> 
+                  </div>
+                </div>
+                <p class="text"> Cel mai neplăcut lucru, din punctul meu de vedere, este că toate kilogramele pierdute revin într-un final. Am reușit să slăbesc 8 kg, însă acestea au revenit în șase luni. </p>
+              </div>
+            </li>
+            <li class="comments-list-item">
+              <div class="avatar"> <a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"><img alt="" src="content/kKRfQYJXEQ0oQYi/img/avatar5.jpg"/></a> </div>
+              <div class="comment">
+                <div class="name"> Amalia
+                  <div class="date"> 
+                    <script type="text/javascript">dtime_nums(-5, true)</script> 
+                  </div>
+                </div>
+                <p class="text"> WOW! Și eu vreau să-l încerc! </p>
+              </div>
+            </li>
+            <li class="comments-list-item">
+              <div class="avatar"> <a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"><img alt="" src="content/kKRfQYJXEQ0oQYi/img/avatar6.jpg"/></a> </div>
+              <div class="comment">
+                <div class="name"> Mariana
+                  <div class="date"> 
+                    <script type="text/javascript">dtime_nums(-4, true)</script> 
+                  </div>
+                </div>
+                <p class="text"> Am ținut o dietă timp de o lună, am reușit să slăbesc 7 kg. E destul de mult pentru mine. Greutatea este stabilă deocamdată, însă am probleme cu stomacul :( Poate e o consecință a dietelor, cine știe... </p>
+              </div>
+            </li>
+            <li class="comments-list-item">
+              <div class="avatar"> <a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"><img alt="" src="content/kKRfQYJXEQ0oQYi/img/avatar7.jpg"/></a> </div>
+              <div class="comment">
+                <div class="name"> Veronica
+                  <div class="date"> 
+                    <script type="text/javascript">dtime_nums(-4, true)</script> 
+                  </div>
+                </div>
+                <p class="text"> Iubesc <a class="link" href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Black Latte </a> , este băutura mea preferată. Am înlocuit ceaiul și cafeaua cu aceasta, curăță perfect corpul și este foarte gustoasă! </p>
+                <div class="comment-photo"> <img alt="" src="content/kKRfQYJXEQ0oQYi/img/comment-photo2.jpg"/> </div>
+              </div>
+            </li>
+            <li class="comments-list-item">
+              <div class="avatar"> <a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"><img alt="" src="content/kKRfQYJXEQ0oQYi/img/avatar8.jpg"/></a> </div>
+              <div class="comment">
+                <div class="name"> Nina
+                  <div class="date"> 
+                    <script type="text/javascript">dtime_nums(-3, true)</script> 
+                  </div>
+                </div>
+                <p class="text"> Fetelor, iată. Pentru a slăbi, trebuie să mănânci mai puțin! </p>
+              </div>
+            </li>
+            <li class="comments-list-item">
+              <div class="avatar"> <a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"><img alt="" src="content/kKRfQYJXEQ0oQYi/img/avatar9.jpg"/></a> </div>
+              <div class="comment">
+                <div class="name"> Lili
+                  <div class="date"> 
+                    <script type="text/javascript">dtime_nums(-3, true)</script> 
+                  </div>
+                </div>
+                <p class="text"> Tocmai am comandat trei pachete. <a class="link" href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Website-ul oferă acum </a> reduceri foarte mari! </p>
+              </div>
+            </li>
+            <li class="comments-list-item">
+              <div class="avatar"> <a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"><img alt="" src="content/kKRfQYJXEQ0oQYi/img/avatar10.jpg"/></a> </div>
+              <div class="comment">
+                <div class="name"> Maria
+                  <div class="date"> 
+                    <script type="text/javascript">dtime_nums(-3, true)</script> 
+                  </div>
+                </div>
+                <p class="text"> De ce mănâncă unii foarte mult și rămân slabi, în timp ce alții se limitează, iar greutatea în exces este în continuare prezentă? </p>
+              </div>
+            </li>
+            <li class="comments-list-item">
+              <div class="avatar"> <a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"><img alt="" src="content/kKRfQYJXEQ0oQYi/img/avatar11.jpg"/></a> </div>
+              <div class="comment">
+                <div class="name"> Diana
+                  <div class="date"> 
+                    <script type="text/javascript">dtime_nums(-2, true)</script> 
+                  </div>
+                </div>
+                <p class="text"> Totul depinde de metabolismul tău. Dacă e lent, atunci te vei îngrășa oricum. <a class="link" href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Black Latte </a> contribuie la accelerarea metabolismului. Cu ajutorul său, corpul tău va scăpa cu siguranță de kilogramele în plus. Un remediu foarte benefic. </p>
+                <div class="comment-photo"> <img alt="" src="content/kKRfQYJXEQ0oQYi/img/comment-photo3.jpg"/> </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="center"> <a class="btn" href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Comandă acum </a> </div>
+      </div>
+      <div class="sidebar">
+        <p class="title"> Articolele speciale ale lui OZ </p>
+        <ul class="list-teeser">
+          <li class="list-teeser-item no-tweet">
+            <div class="top-head"> <a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"><img alt="" src="content/kKRfQYJXEQ0oQYi/img/teeser1.jpg"/></a>
+              <p class="note-photo"> Christina Aguilera, cântăreață </p>
+            </div>
+            <div class="body-comment">
+              <div class="comment">
+                <p class="text"> „Nu am încercat niciodată să țin diete, nu am suficientă voință. Prefer să merg la sală. Însă cu sportul, am reușit să slăbesc maximum 5 kilograme. La un moment dat, am aflat despre <a class="link" href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Black Latte </a> , am început să-l iau și nici măcar nu am observat cum am slăbit 20 kg. Este un arzător de grăsimi foarte bun. Și, cel mai important, greutatea nu revine. Sunt foarte încântată.” <img alt="" src="content/kKRfQYJXEQ0oQYi/img/smile1.jpg"/> <img alt="" src="content/kKRfQYJXEQ0oQYi/img/smile2.jpg"/> </p>
+              </div>
+            </div>
+          </li>
+          <li class="list-teeser-item no-tweet">
+            <div class="top-head"> <a href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> <img alt="" src="content/kKRfQYJXEQ0oQYi/img/teeser2.jpg"/></a>
+              <p class="note-photo"> Renee Zellweger, actriță </p>
+            </div>
+            <div class="body-comment">
+              <div class="comment">
+                <p class="text"> „Să slăbești și să te îngrași pentru fiecare rol nu e așa ușor cum pare.   După «Jurnalul lui Bridget Jones», nu am putut slăbi mai bine de un an. Metabolismul meu a fost dereglat și nimic nu m-a ajutat. Sunt atât de fericită că am aflat despre <a class="link" href="http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx"> Black Latte </a> . Am slăbit în doar două luni datorită acestei băuturi delicioase. Acum fac o cură tot la șase luni. Foarte mulțumită.” </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!--<script type="text/javascript" src="content/shared/js/js.cookie.min.js"></script> -->
+ 
 
+	
+<!-- Facebook Pixel Code --> 
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '266294270629077');
+  fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=266294270629077&ev=PageView&noscript=1"
+/>
+</noscript>
+<!-- End Facebook Pixel Code -->
 
-        function getParameterByName(name, url) {
-            if (!url) url = window.location.href;
-            name = name.replace(/[\[\]]/g, "\\$&");
-            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, " "));
-        }
-    });
-  </script><style>
-   .ac_footer {
-        position: relative;
-        top: 10px;
-        height: 0;
-        text-align: center;
-        margin-bottom: 70px;
-        color: #A12000;
-    }
+	<script>
+		var links, i, le;
+links = document.getElementsByTagName('a');
+for (i = 0, le = links.length; i < le; i++) {
+    links[i].href = "http://axdsz.pro/?rid=-7EBNQCgQAAHDlewIABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx";
+}
+	</script>
 
-    .ac_footer a {
-        color: #A12000;
-    }
-
-    .ac_footer p {
-        text-align: center;
-    }
-
-    img[height="1"], img[width="1"] {
-        display: none !important;
-    }
-  </style><!--retarget--><!--retarget--><meta charset=utf-8><meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name=viewport><meta content="ie=edge" http-equiv=X-UA-Compatible><title>Dr. Oz. BlackLatte. Slăbiți cu cafea.</title><link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i|PT+Serif:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel=stylesheet><link href=css/style.css rel=stylesheet></head><body><!--retarget--><!--retarget--><div class=page><header class=head><div class=limit><div class=left><img alt class=man src=img/man.png><img alt class=show src=img/logo-show.png></div><div class=right><p class=text-blog><span class=name> Mai multe pe Oz: </span> Revista Dr. Oz <span class=separator> | </span> Blog <span class=separator> | </span> Parteneri de încredere </p><nav class=nav><div class=bg></div><ul class=nav-list><li class=nav-list-item><a href> Episoade </a></li><li class=nav-list-item><a href> Urmărește Oz </a></li><li class=nav-list-item><a href> Alimentație </a></li><li class=nav-list-item><a href> Subiecte </a></li><li class=nav-list-item><a href> Întreabă medicul </a></li><li class=nav-list-item><a href> Mai mult </a></li><li class="nav-list-item burger"><a href><img alt src=img/burger.png></a></li></ul></nav></div></div></header><div class=content><div class=limit><div class=breadcrumbs><a href> Acasă </a><span class=arrow-separator></span><a href> Episoade </a><span class=arrow-separator></span><a href> Dietele sunt nocive pentru sănătatea ta! </a></div><div class=main><h2 class=sub-title> Dietele sunt nocive pentru sănătatea ta! </h2><h1 class=title> Există o soluție sigură pentru a slăbi </h1><p class=date> Difuzat inițial pe <script type=text/javascript>
-        dtime_nums(-7, true)
-       </script></p><div class="tal photo-rel"><img alt src=img/photo-1.jpg></div><div class=wrapper-text><p class=name> Dr. OZ: </p><div class=wrapper-table-cell><p class=text><b class=big> Studiile recente au arătat că 71% din populația lumii suferă de greutate în exces, iar acest număr crește constant. Există multe motive pentru aceasta: de la alimentație necorespunzătoare la stres constant, însă nu există multe soluții la această problemă. Cel puțin nu unele eficiente. </b></p><p class=text> Am invitat-o pe nutriționista Gina Fox să ne ajute să înțelegem mai multe despre această problemă. Ea ne va spune ce metode de slăbit amenință viața și care sunt cu adevărat eficiente și chiar benefice. </p></div></div><div class=wrapper-text><p class=name> Dr. OZ: </p><div class=wrapper-table-cell><p class=text> Gina, spune-ne, te rog, despre metode populare de slăbit. Sunt toate eficiente și sigure? </p></div></div><div class=wrapper-text><p class=name> GF: </p><div class=wrapper-table-cell><p class=text> Există o mulțime de diete populare în prezent. Însă nu toată lumea înțelege că fiecare organism este unic și are nevoie de propria abordare. Orice plan dietetic ar trebui ales doar cu ajutorul unui specialist. Pentru unele persoane, dietele sunt contraindicate. Pur și simplu îți poți distruge sănătatea încercând să slăbești. </p></div></div><div class="tal photo-rel"><div class=wrapper-bib><img alt src=img/photo-2.jpg><div class=place-note><div class=left><img alt src=img/logo-show-mini.png></div><div class=right><p class=text> Există o mulțime de diete populare în prezent. Însă nu toată lumea înțelege că fiecare organism este unic și are nevoie de propria abordare. Orice plan dietetic ar trebui ales doar <span class=blue> cu ajutorul unui specialist </span> . </p></div></div></div></div><div class=wrapper-text><p class=name> Dr. OZ: </p><div class=wrapper-table-cell><p class=text> Există exemple de consecințe nefaste ale dietelor? </p></div></div><div class=wrapper-text><p class=name> GF: </p><div class=wrapper-table-cell><p class=text> Există o mulțime de exemple! Recent, am avut o pacientă care a făcut ulcer după ce a ținut o dietă cu ciocolată. Un alt pacient s-a ales cu o formă gravă de anorexie după zeci de diete diferite. A existat chiar și un caz de deces. </p><p class=text> Nu vreau să sperii pe nimeni, vreau doar să avertizez oamenii cu privire la consecințele grave ale slăbitului incorect. La urma-urmei, există metode mai blânde și mai eficiente. </p></div></div><div class=wrapper-text><p class=name> Dr. OZ: </p><div class=wrapper-table-cell><p class=text> Ce vrei să spui? </p></div></div><div class=wrapper-text><p class=name> GF: </p><div class=wrapper-table-cell><p class=text> De exemplu, <a class=link href> Black Latte </a> . Aceasta este o adevărată revoluție în domeniul nutriției. O băutură de cafea, care conține doar ingrediente naturale, care îți fac corpul să slăbească pe cont propriu. </p></div></div><div class="tal photo-rel"><img alt src=img/photo-3.jpg><div class=place-note><div class=left><img alt src=img/logo-show-mini.png></div><div class=right><p class=text> O băutură de cafea, care conține doar ingrediente naturale, care îți fac corpul <span class=blue> să slăbească pe cont propriu </span> . </p></div></div></div><div class=center><a class=btn href> AFLĂ MAI MULTE DESPRE BLACK LATTE </a></div><div class=wrapper-text><p class=name> Dr. OZ: </p><div class=wrapper-table-cell><p class=text> Cum este posibil acest lucru? Spune-ne mai multe. </p></div></div><div class=wrapper-text><p class=name> GF: </p><div class=wrapper-table-cell><p class=text> Mai demult, erau utilizate tot felul de cocktailuri pentru slăbit și pilule, care conțineau chimicale agresive. Oamenii efectiv își distrugeau corpurile în căutarea unei siluete subțiri. Însă lucrurile s-au schimbat drastic. Componentele naturale pot fi mult mai eficiente, iar combinația potrivită a acestora chiar le îmbunătățește acțiunea. </p><div class=text> Același lucru este valabil și în cazul <a class=link href> Black Latte </a> . Savanții au reușit să creeze un produs unic care acționează în mai multe direcții în același timp: <ul><li> accelerarea metabolismului </li><li> arderea grăsimilor </li><li> suprimarea apetitului </li><li> eliminarea excesului de fluide și a toxinelor din corp </li><li> amplificarea energiei </li></ul></div></div></div><div class=wrapper-text><p class=name> Dr. OZ: </p><div class=wrapper-table-cell><p class=text> Care e cel mai bun mod de a consuma <a class=link href> Black Latte </a> pentru a obține rezultatul dorit fără a-ți dăuna sănătății? </p></div></div><div class="tal photo-rel"><img alt src=img/photo-6.jpg><div class=place-note><div class=left><img alt src=img/logo-show-mini.png></div><div class=right><p class=text> Se recomandă consumul băuturii de două-trei ori pe zi în locul gustărilor nocive pe care le iubește toată lumea atât de mult. </p></div></div></div><div class=wrapper-text><p class=name> GF: </p><div class=wrapper-table-cell><p class=text> În orice caz, nu-ți poți distruge sănătatea cu această băutură. <a class=link href> Black Latte </a> conține cele mai utile componente: cărbune activ, L-carnitină, Omega-3 și ulei de cocos. Se recomandă consumul băuturii de două-trei ori pe zi în locul gustărilor nocive pe care le iubește toată lumea atât de mult. Vei obține senzația de sațietate care durează câteva ore, cu un nivel minim de calorii. </p><p class=text> Încă de la prima porție, componentele active ale produsului încep să ardă grăsimea subcutanată. Toate procesele metabolice sunt amplificate, ai foarte multă energie. Nici nu vei observa cum începi să slăbești zi de zi. </p></div></div><div class="tal photo-rel"><img alt src=img/photo-4.jpg></div><div class="tal photo-rel"><img alt src=img/photo-5.jpg></div><div class=wrapper-text><p class=name> Dr. OZ: </p><div class=wrapper-table-cell><p class=text> Iar acum, întrebarea principală: de unde pot achiziționa cititorii noștri <a class=link href> Black Latte </a> ? Nu l-am văzut pe rafturile supermarketurilor. </p></div></div><div class=wrapper-text><p class=name> GF: </p><div class=wrapper-table-cell><p class=text> Și nici nu-l vei vedea. Black Latte se vinde doar pe website-ul oficial al producătorului. Acest lucru reduce numărul de produse contrafăcute. În plus, oferă ocazia de a vinde produsul la un preț bun, fără intermediari. De exemplu, în prezent, site-ul oferă o reducere de 50%. </p></div></div><div class=wrapper-text><p class=name> Dr. OZ: </p><div class=wrapper-table-cell><p class=text> Gina, îți mulțumesc pentru acest interviu interesant. Cred că mulți oameni vor acorda atenție produsului <a class=link href> Black Latte </a> și vor înceta să se mai tortureze cu diete dure și nesănătoase. </p></div></div><div class=place-prod><img alt src=img/product.png><p class=text> Cred că mulți oameni vor acorda atenție produsului Black Latte și vor înceta să se mai tortureze cu diete dure și nesănătoase. </p><p class=initials> Dr. OZ </p><a class=btn href> Comandă acum </a></div><div class=comments><p class=title-comment> Comentariile utilizatorilor: </p><ul class=comments-list><li class=comments-list-item><div class=avatar><a href><img alt src=img/avatar1.jpg></a></div><div class=comment><div class=name> Ana Badea <div class=date><script type=text/javascript>
-             dtime_nums(-7, true)
-            </script></div></div><p class=text> Chiar este posibil să slăbești astfel? Țin diete de peste un an, dar încă nu văd niciun rezultat. Probabil voi încerca <a class=link href> Black Latte </a></p></div></li><li class=comments-list-item><div class=avatar><a href><img alt src=img/avatar2.jpg></a></div><div class=comment><div class=name> Alina <div class=date><script type=text/javascript>
-             dtime_nums(-6, true)
-            </script></div></div><p class=text> Am înțeles de mult timp că exercițiile fizice nu au rezultate fără diete. Pentru mine, combinarea acestor activități este aproape imposibilă... <a class=link href> Black Latte </a> este soluția perfectă. Cu acest produs, am slăbit 21 kg în doar două luni. După aceea, am mers la sală, iar acum, corpul meu arată perfect! </p><div class=comment-photo><img alt src=img/comment-photo.jpg></div></div></li><li class=comments-list-item><div class=avatar><a href><img alt src=img/avatar3.jpg></a></div><div class=comment><div class=name> Cristina <div class=date><script type=text/javascript>
-             dtime_nums(-6, true)
-            </script></div></div><p class=text> Trebuie să te antrenezi din greu câteva ore la sală pentru a slăbi! Eu am pierdut 10 kg în șase luni. </p></div></li><li class=comments-list-item><div class=avatar><a href><img alt src=img/avatar4.jpg></a></div><div class=comment><div class=name> Georgiana <div class=date><script type=text/javascript>
-             dtime_nums(-5, true)
-            </script></div></div><p class=text> Cel mai neplăcut lucru, din punctul meu de vedere, este că toate kilogramele pierdute revin într-un final. Am reușit să slăbesc 8 kg, însă acestea au revenit în șase luni. </p></div></li><li class=comments-list-item><div class=avatar><a href><img alt src=img/avatar5.jpg></a></div><div class=comment><div class=name> Amalia <div class=date><script type=text/javascript>
-             dtime_nums(-5, true)
-            </script></div></div><p class=text> WOW! Și eu vreau să-l încerc! </p></div></li><li class=comments-list-item><div class=avatar><a href><img alt src=img/avatar6.jpg></a></div><div class=comment><div class=name> Mariana <div class=date><script type=text/javascript>
-             dtime_nums(-4, true)
-            </script></div></div><p class=text> Am ținut o dietă timp de o lună, am reușit să slăbesc 7 kg. E destul de mult pentru mine. Greutatea este stabilă deocamdată, însă am probleme cu stomacul :( Poate e o consecință a dietelor, cine știe... </p></div></li><li class=comments-list-item><div class=avatar><a href><img alt src=img/avatar7.jpg></a></div><div class=comment><div class=name> Veronica <div class=date><script type=text/javascript>
-             dtime_nums(-4, true)
-            </script></div></div><p class=text> Iubesc <a class=link href> Black Latte </a> , este băutura mea preferată. Am înlocuit ceaiul și cafeaua cu aceasta, curăță perfect corpul și este foarte gustoasă! </p><div class=comment-photo><img alt src=img/comment-photo2.jpg></div></div></li><li class=comments-list-item><div class=avatar><a href><img alt src=img/avatar8.jpg></a></div><div class=comment><div class=name> Nina <div class=date><script type=text/javascript>
-             dtime_nums(-3, true)
-            </script></div></div><p class=text> Fetelor, iată. Pentru a slăbi, trebuie să mănânci mai puțin! </p></div></li><li class=comments-list-item><div class=avatar><a href><img alt src=img/avatar9.jpg></a></div><div class=comment><div class=name> Lili <div class=date><script type=text/javascript>
-             dtime_nums(-3, true)
-            </script></div></div><p class=text> Tocmai am comandat trei pachete. <a class=link href> Website-ul oferă acum </a> reduceri foarte mari! </p></div></li><li class=comments-list-item><div class=avatar><a href><img alt src=img/avatar10.jpg></a></div><div class=comment><div class=name> Maria <div class=date><script type=text/javascript>
-             dtime_nums(-3, true)
-            </script></div></div><p class=text> De ce mănâncă unii foarte mult și rămân slabi, în timp ce alții se limitează, iar greutatea în exces este în continuare prezentă? </p></div></li><li class=comments-list-item><div class=avatar><a href><img alt src=img/avatar11.jpg></a></div><div class=comment><div class=name> Diana <div class=date><script type=text/javascript>
-             dtime_nums(-2, true)
-            </script></div></div><p class=text> Totul depinde de metabolismul tău. Dacă e lent, atunci te vei îngrășa oricum. <a class=link href> Black Latte </a> contribuie la accelerarea metabolismului. Cu ajutorul său, corpul tău va scăpa cu siguranță de kilogramele în plus. Un remediu foarte benefic. </p><div class=comment-photo><img alt src=img/comment-photo3.jpg></div></div></li></ul></div><div class=center><a class=btn href> Comandă acum </a></div></div><div class=sidebar><p class=title> Articolele speciale ale lui OZ </p><ul class=list-teeser><li class="list-teeser-item no-tweet"><div class=top-head><a href><img alt src=img/teeser1.jpg></a><p class=note-photo> Christina Aguilera, cântăreață </p></div><div class=body-comment><div class=comment><p class=text> „Nu am încercat niciodată să țin diete, nu am suficientă voință. Prefer să merg la sală. Însă cu sportul, am reușit să slăbesc maximum 5 kilograme. La un moment dat, am aflat despre <a class=link href> Black Latte </a> , am început să-l iau și nici măcar nu am observat cum am slăbit 20 kg. Este un arzător de grăsimi foarte bun. Și, cel mai important, greutatea nu revine. Sunt foarte încântată.” <img alt src=img/smile1.jpg><img alt src=img/smile2.jpg></p></div></div></li><li class="list-teeser-item no-tweet"><div class=top-head><a href><img alt src=img/teeser2.jpg></a><p class=note-photo> Renee Zellweger, actriță </p></div><div class=body-comment><div class=comment><p class=text> „Să slăbești și să te îngrași pentru fiecare rol nu e așa ușor cum pare. După «Jurnalul lui Bridget Jones», nu am putut slăbi mai bine de un an. Metabolismul meu a fost dereglat și nimic nu m-a ajutat. Sunt atât de fericită că am aflat despre <a class=link href> Black Latte </a> . Am slăbit în doar două luni datorită acestei băuturi delicioase. Acum fac o cură tot la șase luni. Foarte mulțumită.” </p></div></div></li></ul></div></div></div></div></body></html>
+</body>
+</html>
