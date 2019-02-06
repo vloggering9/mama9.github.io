@@ -1,0 +1,241 @@
+ul#header_links {
+	list-style-type: none;
+//	float: right;
+	margin-top:5px
+}
+#header_links li {
+	float: left;
+	padding: 0 8px;
+	border-left:1px solid #333;
+	line-height:11px;
+}
+#header_links li:first-child {border:none;}
+#header_links a {text-decoration: none}
+#header_links a:hover {text-decoration:underline}
+
+#permanent_links div {border-bottom: 1px dotted #eee}
+#permanent_links div a {
+	display: block;
+	padding: 7px 11px 5px 22px;
+	color: #333;
+	background:url(img/arrow_right_2.png) no-repeat 10px 10px;
+}
+
+ul#footer_links{
+	clear:both;
+	text-align: center;
+	padding-bottom:6px
+}
+ul#footer_links li{
+	display: inline;
+	padding:0 10px
+}
+
+.tags_block .block_content {
+	overflow: hidden;
+}
+
+.tags_block .block_content a {
+	border: 1px solid #d6d4d4;
+	display: inline-block;
+	float: left;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 16px;
+	margin: 0 3px 3px 0;
+	padding: 4px 9px 5px 9px;
+}
+
+.tags_block .block_content a:hover {
+	background: #f6f6f6;
+	color: #333333;
+}
+
+#advancedtags_sitemap ul {
+	clear: both;
+}
+
+#advancedtags_sitemap ul li {
+	display: inline-block;
+	padding-right: 20px;
+}
+
+#viewed-products_block_left .products li {
+	padding:10px 0;
+	border-bottom:1px dotted #ccc;
+}
+#viewed-products_block_left .products li.last_item {
+	padding-bottom:0;
+	border:none;
+}
+
+#viewed-products_block_left .content_img {
+	float:left;
+}
+#viewed-products_block_left .text_desc {
+	float:left;
+	margin-left: 10px;
+   width: 130px;
+}
+#viewed-products_block_left li .text_desc .s_title_block, #viewed-products_block_left li .text_desc h5 {
+	padding:0 0 5px 0;
+	font-size:12px;
+	color:#333;
+	font-weight: bold;
+}
+
+#viewed-products_block_left li .text_desc .s_title_block a, #viewed-products_block_left li .text_desc h5 a {
+	color:#333;
+}
+#viewed-products_block_left li .text_desc p,
+#viewed-products_block_left li .text_desc p a {
+	padding-bottom:0;
+	line-height:14px;
+	color:#666
+}
+#module-codfee-codfee_payment #left_column {display:none}
+#module-codfee-payment #left_column {display:none}
+
+#payment_form {
+	padding: 15px;
+	border: 1px solid #CCC;
+	font-size: 12px;
+	color: black;
+	background: #F8F8F8;
+}
+
+#payment_form label {
+	display: inline-block;
+	padding: 6px 15px;
+	width: 230px;
+	font-size: 14px;
+	text-align: right;
+}
+
+#payment_form p.text input, #payment_form p.select select {
+	padding: 0 5px;
+	height: 22px;
+	width: 260px;
+	border: 1px solid #CCC;
+	font-size: 12px;
+	color: #666;
+}
+
+#payment_form p.text, #payment_form required {
+	color: #222;
+}
+
+#payment_form #errorDiv {
+	margin-bottom: 15px;
+}
+
+#payment_form h3 {
+	font-size: 13px;
+}
+    p.payment_module a.cash {
+        /*padding: 30px 30px 30px 79px;*/
+        background: url('{$payment_logo|escape:"htmlall":"UTF-8"}') left center no-repeat #fbfbfb;
+        /*background-color: transparent;*/
+        {if $payment_text neq ''}padding-bottom: 10px;{/if}
+    }
+    p.payment_module a:hover {
+        background-color: #f6f6f6;
+    }
+
+p.payment_module a.seqr {
+    background: url(../img/seqr-logo.jpg) 15px 15px no-repeat #fbfbfb;
+}
+
+p.payment_module a.seqr:after {
+    display: block;
+    content: "\f054";
+    position: absolute;
+    right: 15px;
+    margin-top: -11px;
+    top: 50%;
+    font-family: "FontAwesome";
+    font-size: 25px;
+    height: 22px;
+    width: 14px;
+    color: #a60018;
+}
+
+.seqr-confirmation {
+    margin: 50px;
+}
+
+.seqr-box {
+    border: 1px solid #d6d4d4;
+    padding: 10px;
+    margin: 10px auto;
+    line-height: 23px;
+    width: 550px;
+}
+
+.seqr-box > * {
+    text-align: center;
+}
+
+#seqr-container {
+    margin: auto;
+}
+
+.facebook-fanbox {
+	overflow-x : hidden;
+}
+
+.adcms-category-slider li h5 {
+	font-weight: bold;
+}
+
+.list_carousel {
+	width: 360px;
+}
+.list_carousel ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+.list_carousel li {
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin:5px 20px;vertical-align:top;
+	display: inline-block;#display: inline;
+}
+.list_carousel.responsive {
+	width: auto;
+	margin-left: 0;
+	padding:0;
+}
+.cclearfix {
+	float: none;
+	clear: both;
+}
+
+
+.pager {
+	float: left;
+	width: 300px;
+	text-align: center;
+}
+.pager a {
+	margin: 0 5px;
+	text-decoration: none;
+}
+.pager a.selected {
+	text-decoration: underline;
+}
+.timer {
+	background-color: #999;
+	height: 6px;
+	width: 0px;
+}
+.ui-tabs .ui-tabs-hide {
+    display: block;
+    visibility: hidden;
+    height: 0;
+}
+
+
