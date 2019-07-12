@@ -1,0 +1,291 @@
+;function testing(obj) {
+	console.log(obj);
+	obj.update()
+};
+(function ($, _, undefined) {
+	"use strict";
+	ips.controller.register('shoutbox.front.shoutbox.main', {
+		_shoutboxBaseUrl : null,
+		_shoutbox : null,
+		_inputfield : null,
+		initialize : function () {
+			this.on('click', '[data-action="shout"]', this.shout);
+			this.on('onsubmit', '[data-action="shoutform"]', this.shout);
+			this.on('click', '[data-action="delete"]', this.del);
+			this.on('click', '[data-action="shout_cancel"]', this.scancel);
+			this.on('click', '[data-action="shout_update"]', this.supdate);
+			this.on('click', '[data-action="edit"]', this.edit_shout);
+			this.on('click', '[data-action="toggleSound"]', this.toggleSound);
+			this.on('click', '[data-action="emo_emo"]', this.emoticons);
+			if (document.cookie.indexOf('shoutbox_conf_orderby') < 0) {
+				ips.utils.cookie.set('shoutbox_conf_orderby', 'DESC')
+			}
+			var descasc = $("#descasc").val();
+			if (descasc == 'ASC')
+				$("#shoutboxWrap").animate({
+					scrollTop : 0
+				}, 0);
+			else
+				$("#shoutboxWrap").animate({
+					scrollTop : $("#shoutboxWrap")[0].scrollHeight
+				}, 0);
+			var interval = (ips.getSetting('shoutbox_conf_interval') > 0 ? ips.getSetting('shoutbox_conf_interval') : 50000);
+			if (document.cookie.indexOf('shoutbox_soundEnabled') < 0) {
+				ips.utils.cookie.set('shoutbox_soundEnabled', 'true')
+			}
+			this.setup();
+			this.scope.find('[data-action="toggleSound"] .fa').replaceWith($('<i/>').addClass('fa').addClass(ips.utils.cookie.get('shoutbox_soundEnabled') == 'true' ? 'fa-volume-up' : 'fa-volume-off'));
+
+		},
+		setup : function () {
+			var self = this
+		},
+		setup : function () {
+			this._shoutbox = $('#shoutboxWrap');
+			this._shoutboxBaseUrl = ips.getSetting('baseURL') + "?app=shoutbox&module=shoutbox&controller=shoutbox";
+			this._inputfield = $('[name="txt"]');
+							console.log("[1]*-*-*-* IT WORKS MAN *-*-*-");
+				var lastID = $('#shoutcontent').children().first().attr('id');
+				var ajaxurl = this._shoutboxBaseUrl + "&do=refresh";
+				ips.getAjax()(ajaxurl, {
+					type : 'post',
+					dataType : 'json',
+					data : {
+						lastID : lastID,
+					}
+				}).done(function (response) {
+					if (response.type == 'error') {
+						ips.ui.alert.show({
+							message : response.message,
+						})
+					} else {
+		console.log("response lastID: "+response.lastID+" lastID: "+lastID);				
+						if (response.lastID > lastID || undefined === lastID ) {
+console.log("refreshing");		
+						var msgold = $("ul .ipsList_inline:first").html();
+						$("#shoutcontent").empty();
+						$("#shoutcontent").html(response.content);
+						var msgnew = $("ul .ipsList_inline:first").html();
+						if (msgold != msgnew) {}
+						
+						var descasc = $("#descasc").val();
+						if (descasc == 'ASC')
+							$("#shoutboxWrap").animate({
+								scrollTop : 0
+							}, 0);
+						else
+							$("#shoutboxWrap").animate({
+								scrollTop : $("#shoutboxWrap")[0].scrollHeight
+							}, 0);
+						}
+					}
+				}).fail(function (response) {
+					console.log("testing update2")
+				}).always(function () {});
+			
+			setInterval((function (self) {
+					return self.update
+				})(this), 50000)
+		},
+		emoticons : function (e) {
+			var emo = $(e.currentTarget).attr('data-emoticon');
+			var txt = this._inputfield.val() + emo;
+			this._inputfield.val(txt);
+			this._inputfield.focus()
+		},
+		toggleSound : function (e) {
+			e.preventDefault();
+			this.scope.find('[data-action="toggleSound"] .fa').replaceWith($('<i/>').addClass('fa').addClass(ips.utils.cookie.get('shoutbox_soundEnabled') == 'true' ? 'fa-volume-off' : 'fa-volume-up').removeClass(ips.utils.cookie.get('shoutbox_soundEnabled') == 'true' ? 'fa-volume-up' : 'fa-volume-off'));
+			ips.utils.cookie.set('shoutbox_soundEnabled', ips.utils.cookie.get('shoutbox_soundEnabled') == 'true' ? 'false' : 'true')
+		},
+		update : function (e) {
+			this._shoutboxBaseUrl = ips.getSetting('baseURL') + "?app=shoutbox&module=shoutbox&controller=shoutbox";
+			if ($('.shout_row').length <= ips.getSetting('shoutbox_conf_shoutlimit')) {
+				console.log("[1]*-*-*-* IT WORKS MAN *-*-*-");
+				var lastID = $('#shoutcontent').children().first().attr('id');
+				var ajaxurl = this._shoutboxBaseUrl + "&do=refresh";
+				ips.getAjax()(ajaxurl, {
+					type : 'post',
+					dataType : 'json',
+					data : {
+						lastID : lastID,
+					}
+				}).done(function (response) {
+					if (response.type == 'error') {
+						ips.ui.alert.show({
+							message : response.message,
+						})
+					} else {
+		console.log("response lastID: "+response.lastID+" lastID: "+lastID);				
+						if (response.lastID > lastID || undefined === lastID ) {
+console.log("refreshing");		
+						var msgold = $("ul .ipsList_inline:first").html();
+						$("#shoutcontent").empty();
+						$("#shoutcontent").html(response.content);
+						var msgnew = $("ul .ipsList_inline:first").html();
+						if (msgold != msgnew) {}
+						
+						var descasc = $("#descasc").val();
+						if (descasc == 'ASC')
+							$("#shoutboxWrap").animate({
+								scrollTop : 0
+							}, 0);
+						else
+							$("#shoutboxWrap").animate({
+								scrollTop : $("#shoutboxWrap")[0].scrollHeight
+							}, 0);
+						}
+					}
+				}).fail(function (response) {
+					console.log("testing update2")
+				}).always(function () {})
+			} else {
+				console.log("testing update3");
+				var ajaxurl = ips.getSetting('baseURL') + "?app=shoutbox&module=shoutbox&controller=shoutbox&do=refresh";
+				ips.getAjax()(ajaxurl, {
+					type : 'post',
+					dataType : 'json',
+				}).done(function (response) {
+					if (response.type == 'error') {
+						ips.ui.alert.show({
+							message : response.message,
+						});
+						console.log("testing update4")
+					} else {
+						var msgold = $("ul .ipsList_inline:first").html();
+						$("#shoutcontent").empty();
+						$("#shoutcontent").html(response.content);
+						var msgnew = $("ul .ipsList_inline:first").html();
+						if (msgold != msgnew) {}
+
+						var descasc = $("#descasc").val();
+						if (descasc == 'ASC')
+							$("#shoutboxWrap").animate({
+								scrollTop : 0
+							}, 0);
+						else
+							$("#shoutboxWrap").animate({
+								scrollTop : $("#shoutboxWrap")[0].scrollHeight
+							}, 0)
+					}
+				}).fail(function () {}).always(function () {})
+			}
+			return false
+		},
+		shout : function (e) {
+			$('[name="txt"]').prop('disabled', true);
+			$('#shout_button').prop('disabled', true);
+			var ajaxurl = this._shoutboxBaseUrl + "&do=shout";
+			ips.getAjax()(ajaxurl, {
+				type : 'post',
+				dataType : 'json',
+				data : {
+					txt : $('[name="txt"]').val(),
+				}
+			}).done(function (response) {
+				var getSounds = ips.utils.cookie.get('shoutbox_soundEnabled');
+				if (getSounds == 'true') {
+					var shoutbox_audio = new Audio('applications/shoutbox/interface/sounds/message.wav');
+					shoutbox_audio.play()
+				}
+				if (response.type == 'error') {
+					ips.ui.alert.show({
+						message : response.message,
+					})
+				} else {
+					var descasc = $("#descasc").val();
+					if (descasc == 'DESC') {
+						$("#shoutcontent").append(response.content);
+						$("#shoutboxWrap").animate({
+							scrollTop : $("#shoutboxWrap")[0].scrollHeight
+						}, 0)
+					} else {
+						$("#shoutcontent").prepend(response.content);
+						$("#shoutboxWrap").animate({
+							scrollTop : 0
+						}, 0)
+					}
+					$('[name="txt"]').val("")
+				}
+			}).fail(function (response) {
+				ips.ui.alert.show({
+					message : response.message,
+				})
+			}).always(function () {
+				$('[name="txt"]').prop('disabled', false);
+				$('#shout_button').prop('disabled', false);
+				$('[name="txt"]').focus()
+			});
+			return false
+		},
+		del : function (e) {
+			e.preventDefault();
+			var ajaxurl = this._shoutboxBaseUrl + "&do=delete";
+			var shoutID = $(e.currentTarget).attr('data-id');
+			ips.getAjax()(ajaxurl, {
+				type : 'post',
+				dataType : 'json',
+				data : {
+					id : shoutID,
+				}
+			}).done(function (response) {
+				if (response.type == 'error') {
+					ips.ui.alert.show({
+						message : response.message,
+					})
+				} else {
+					ips.ui.flashMsg.show(response.message);
+					$("#" + shoutID).remove()
+				}
+			}).fail(function (response) {
+				ips.ui.alert.show({
+					message : response.message,
+				})
+			}).always(function () {})
+		},
+		edit_shout : function (e) {
+			e.preventDefault();
+			var shoutID = $(e.currentTarget).attr('data-id');
+			$('#shout_vs_' + shoutID).hide();
+			$('#shout_invs_' + shoutID).show()
+		},
+		scancel : function (e) {
+			e.preventDefault();
+			var shoutID = $(e.currentTarget).attr('data-id');
+			$('#shout_vs_' + shoutID).show();
+			$('#shout_invs_' + shoutID).hide();
+			var txt = $('#shout_vs_' + shoutID).html();
+			$('#edit_st_' + shoutID).val(txt)
+		},
+		supdate : function (e) {
+			e.preventDefault();
+			var ajaxurl = this._shoutboxBaseUrl + "&do=shout_update";
+			var shoutID = $(e.currentTarget).attr('data-id');
+			ips.getAjax()(ajaxurl, {
+				type : 'post',
+				dataType : 'json',
+				data : {
+					id : shoutID,
+					txt : $('#edit_st_' + shoutID).val(),
+				}
+			}).done(function (response) {
+				if (response.type == 'error') {
+					ips.ui.alert.show({
+						message : response.message,
+					})
+				} else {
+					ips.ui.flashMsg.show(response.message);
+					var txt = $('#edit_st_' + shoutID).val();
+					$('#shout_vs_' + shoutID).html(txt);
+					$('#shout_vs_' + shoutID).show();
+					$('#shout_invs_' + shoutID).hide()
+				}
+			}).fail(function (response) {
+				ips.ui.alert.show({
+					message : response.message,
+				})
+			}).always(function () {})
+		},
+	})
+}
+	(jQuery, _));

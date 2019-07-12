@@ -1,0 +1,74 @@
+$( document ).ready( function () {
+
+    var Numbers = function () {
+
+        this.init();
+    };
+
+    Numbers.prototype.getNodes = function () {
+
+        this.nodes = {};
+
+        this.nodes.$window = $(window);
+        this.nodes.$document = $(document);
+        this.nodes.$brandingPlaceholder = $('.numbers-promo-placeholder[data-numbers-type="branding"]');
+        this.nodes.$brandingPlaceholderLeft = $('.numbers-promo-placeholder--left');
+        this.nodes.$brandingPlaceholderRight = $('.numbers-promo-placeholder--right');
+    };
+
+    Numbers.prototype.init = function () {
+
+        this.getNodes();
+        this.initBranding();
+    };
+
+    Numbers.prototype.initBranding = function () {
+        var offsetBottom, offsetTop, $this;
+        offsetTop = this.nodes.$brandingPlaceholder.data('offset-top');
+        offsetBottom = this.nodes.$brandingPlaceholder.data('offset-bottom');
+        $this = this;
+
+        this.nodes.$window.on('resize scroll', (function(_this) {
+            return function() {
+                return _this.setBrandingPosition(offsetTop, offsetBottom);
+            };
+        })(this));
+
+        this.setBrandingPosition(offsetTop, offsetBottom);
+    };
+
+    Numbers.prototype.setBrandingTopPosition = function(offsetTop) {
+        var topDelta, topOffset, scrollY;
+        topOffset = 36;
+        scrollY = window.scrollY ? window.scrollY : window.pageYOffset
+        topDelta = offsetTop - scrollY;
+
+        if (topDelta > 36) {
+            topOffset = topDelta;
+        }
+
+        this.nodes.$brandingPlaceholderLeft.css('top', topOffset);
+        this.nodes.$brandingPlaceholderRight.css('top', topOffset);
+    };
+
+    Numbers.prototype.setBrandingBottomPosition = function(offsetBottom) {
+        var bottomOffset, scrollHeight, scrollY;
+        bottomOffset = 0;
+        scrollY = window.scrollY ? window.scrollY : window.pageYOffset
+        scrollHeight =scrollY + window.innerHeight;
+
+        if (document.body.clientHeight - offsetBottom <= scrollHeight) {
+            bottomOffset = offsetBottom - (document.body.clientHeight - scrollHeight);
+        }
+
+        this.nodes.$brandingPlaceholderLeft.css('bottom', bottomOffset);
+        this.nodes.$brandingPlaceholderRight.css('bottom', bottomOffset);
+    };
+
+    Numbers.prototype.setBrandingPosition = function(offsetTop, offsetBottom) {
+        this.setBrandingTopPosition(offsetTop);
+        this.setBrandingBottomPosition(offsetBottom);
+    };
+
+    new Numbers();
+});
